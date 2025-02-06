@@ -12,6 +12,16 @@ export default defineConfig({
     vueDevTools(),
     tailwindcss()  // Added Tailwind CSS plugin here
   ],
+  server: {
+    port: 5000,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
   
   resolve: {
     alias: {

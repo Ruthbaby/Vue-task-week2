@@ -1,7 +1,7 @@
-<!-- <script setup>
+<script setup>
 import { RouterLink } from 'vue-router';
 import Card from '@/components/Card.vue';
-</script> -->
+</script>
 
 <template>
   <section class="py-4">
